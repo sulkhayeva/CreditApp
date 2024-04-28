@@ -102,13 +102,6 @@ class RegisterController: UIViewController {
 
 extension RegisterController: UITextFieldDelegate{
         
-        func showMessage(_ message: String) {
-            let alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertController.Style.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            alertController.view.tintColor = UIColor.systemIndigo
-            present(alertController, animated: true, completion: nil)
-        }
-        
         func textFieldDidChangeSelection(_ textField: UITextField) {
             guard let text = textField.text else {return}
             switch textField {
