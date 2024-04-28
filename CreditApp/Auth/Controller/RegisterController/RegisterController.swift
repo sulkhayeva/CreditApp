@@ -15,10 +15,10 @@ class RegisterController: UIViewController {
     @IBOutlet private weak var idenfication: UITextField!
     @IBOutlet private weak var usernameTextfield: UITextField!
     @IBOutlet private weak var passwordTextfield: UITextField!
-    @IBOutlet private weak var signInButton: UIButton!
+    @IBOutlet private weak var signUpButton: UIButton!
     @IBOutlet private weak var backButton: UIButton!
     
-    @IBAction func signInActionRegister(_ sender: UIButton){
+    @IBAction func signUpActionRegister(_ sender: UIButton){
         
     }
     
@@ -65,7 +65,7 @@ class RegisterController: UIViewController {
         passwordTextfield.layer.borderWidth = 1.0
         passwordTextfield.layer.borderColor = borderColorButton.cgColor
         
-        signInButton.layer.cornerRadius = 6
+        signUpButton.layer.cornerRadius = 6
     }
 
 }
