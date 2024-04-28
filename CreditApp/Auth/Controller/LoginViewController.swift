@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
         } 
         
         else if username.count == 0 || pass.count == 0 {
-            showMessage("Melumatları daxil edin!")
+            showMessage("Məlumatları daxil edin!")
         }
         
         else {

@@ -40,9 +40,6 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="alk-Tm-QmE" id="qUy-iQ-dEq"/>
-                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4G-Iw-tyS">
                                                         <rect key="frame" x="0.0" y="72" width="382" height="48"/>
@@ -172,10 +169,10 @@
                                 <rect key="frame" x="0.0" y="105.33333333333331" width="430" height="826.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qeT-cf-qXC">
-                                        <rect key="frame" x="0.0" y="24" width="430" height="408"/>
+                                        <rect key="frame" x="0.0" y="24" width="430" height="480"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="dXI-YO-MOf">
-                                                <rect key="frame" x="24" y="0.0" width="382" height="408"/>
+                                                <rect key="frame" x="24" y="0.0" width="382" height="480"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueg-TE-jLN">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -213,8 +210,17 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5th-vK-gnf">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akJ-4x-I8L">
                                                         <rect key="frame" x="0.0" y="288" width="382" height="48"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="pYw-eA-MQh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5th-vK-gnf">
+                                                        <rect key="frame" x="0.0" y="360" width="382" height="48"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="4zX-d1-Ryx"/>
@@ -223,7 +229,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1DB-mf-2Rx">
-                                                        <rect key="frame" x="0.0" y="360" width="382" height="48"/>
+                                                        <rect key="frame" x="0.0" y="432" width="382" height="48"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="mx2-zx-Qfe"/>
@@ -291,8 +297,9 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Tg3-wZ-h8c" id="TC4-de-lvA"/>
+                        <outlet property="emailTextfield" destination="akJ-4x-I8L" id="xH3-bz-mWm"/>
                         <outlet property="fathersName" destination="jgD-0S-0p0" id="l8I-j4-lhr"/>
-                        <outlet property="idenfication" destination="gCD-4y-b8b" id="L2p-sx-R9b"/>
+                        <outlet property="identification" destination="gCD-4y-b8b" id="oB6-vE-g4h"/>
                         <outlet property="nameField" destination="ueg-TE-jLN" id="4mJ-zt-spE"/>
                         <outlet property="passwordTextfield" destination="1DB-mf-2Rx" id="6ou-S4-60n"/>
                         <outlet property="signUpButton" destination="Xco-7E-boo" id="3md-pR-ayC"/>
