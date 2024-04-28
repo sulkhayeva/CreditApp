@@ -3,6 +3,7 @@
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -109,7 +110,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dXQ-G5-qvK"/>
-                        <color key="backgroundColor" red="0.98786634210000002" green="0.97677189109999996" blue="0.93332630400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="main_bg_color"/>
                         <constraints>
                             <constraint firstItem="b4x-ze-ekF" firstAttribute="top" secondItem="PFb-py-vmL" secondAttribute="topMargin" constant="-59" id="2Eq-0D-nZx"/>
                             <constraint firstItem="b4x-ze-ekF" firstAttribute="height" secondItem="PFb-py-vmL" secondAttribute="height" multiplier="0.0912017" id="4N7-AX-qVR"/>
@@ -145,7 +146,7 @@
         <!--Login View Controller-->
         <scene sceneID="xDv-wU-q3X">
             <objects>
-                <viewController id="alk-Tm-QmE" customClass="LoginViewController" customModule="CreditApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="alk-Tm-QmE" customClass="LoginViewController" customModule="CreditApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kl3-n7-k6p">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +243,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0CN-7C-zZI"/>
-                        <color key="backgroundColor" red="0.98786634210000002" green="0.97677189109999996" blue="0.93332630400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="main_bg_color"/>
                         <constraints>
                             <constraint firstItem="NLl-7l-WLv" firstAttribute="width" secondItem="Kl3-n7-k6p" secondAttribute="width" multiplier="0.3" id="1C2-O8-Otw"/>
                             <constraint firstItem="Vky-ZG-M2L" firstAttribute="leading" secondItem="0CN-7C-zZI" secondAttribute="leading" id="5Re-x1-bT3"/>
@@ -276,5 +277,8 @@
     <resources>
         <image name="Debet" width="1161" height="1044"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <namedColor name="main_bg_color">
+            <color red="0.9882352941176471" green="0.97647058823529409" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
