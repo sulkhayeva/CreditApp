@@ -28,27 +28,17 @@ class LoginViewController: UIViewController {
     }
     
     fileprivate func configureDesign(){
-        let redValue: CGFloat = 178.0 / 255.0
-        let greenValue: CGFloat = 89.0 / 255.0
-        let blueValue: CGFloat = 45.0 / 255.0
-        let borderColorField = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
-        
         usernameField.layer.borderWidth = 1.0
-        usernameField.layer.borderColor = UIColor(named: "bordorColor")?.cgColor
+        usernameField.layer.borderColor = UIColor(named: "usernameBorder")?.cgColor
         usernameField.layer.cornerRadius = 6
         passwordField.layer.borderWidth = 1.0
-        passwordField.layer.borderColor = borderColorField.cgColor
+        passwordField.layer.borderColor = UIColor(named: "usernameBorder")?.cgColor
         passwordField.layer.cornerRadius = 6
-        
-        let redColor: CGFloat = 32.0 / 255.0
-        let greenColor: CGFloat = 49.0 / 255.0
-        let blueColor: CGFloat = 96.0 / 255.0
-        let borderColorButton = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
         
         signIn.layer.cornerRadius = 6
         signUp.layer.cornerRadius = 6
         signUp.layer.borderWidth = 1.0
-        signUp.layer.borderColor = borderColorButton.cgColor
+        signUp.layer.borderColor = UIColor(named: "signUpBorder")?.cgColor
         
     }
 

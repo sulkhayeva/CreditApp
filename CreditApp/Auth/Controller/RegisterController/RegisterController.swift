@@ -36,34 +36,29 @@ class RegisterController: UIViewController {
     }
     
     fileprivate func configureDesign(){
-        let redColor: CGFloat = 32.0 / 255.0
-        let greenColor: CGFloat = 49.0 / 255.0
-        let blueColor: CGFloat = 96.0 / 255.0
-        let borderColorButton = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
-        
         nameField.layer.cornerRadius = 6
         nameField.layer.borderWidth = 1.0
-        nameField.layer.borderColor = borderColorButton.cgColor
+        nameField.layer.borderColor = UIColor(named: "signUpBorder")?.cgColor
         
         surnameField.layer.cornerRadius = 6
         surnameField.layer.borderWidth = 1.0
-        surnameField.layer.borderColor = borderColorButton.cgColor
+        surnameField.layer.borderColor = UIColor(named: "signUpBorder")?.cgColor
         
         fathersName.layer.cornerRadius = 6
         fathersName.layer.borderWidth = 1.0
-        fathersName.layer.borderColor = borderColorButton.cgColor
+        fathersName.layer.borderColor = UIColor(named: "signUpBorder")?.cgColor
         
         idenfication.layer.cornerRadius = 6
         idenfication.layer.borderWidth = 1.0
-        idenfication.layer.borderColor = borderColorButton.cgColor
+        idenfication.layer.borderColor = UIColor(named: "signUpBorder")?.cgColor
         
         usernameTextfield.layer.cornerRadius = 6
         usernameTextfield.layer.borderWidth = 1.0
-        usernameTextfield.layer.borderColor = borderColorButton.cgColor
+        usernameTextfield.layer.borderColor = UIColor(named: "signUpBorder")?.cgColor
         
         passwordTextfield.layer.cornerRadius = 6
         passwordTextfield.layer.borderWidth = 1.0
-        passwordTextfield.layer.borderColor = borderColorButton.cgColor
+        passwordTextfield.layer.borderColor = UIColor(named: "signUpBorder")?.cgColor
         
         signUpButton.layer.cornerRadius = 6
     }
