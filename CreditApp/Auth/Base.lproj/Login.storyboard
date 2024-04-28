@@ -40,6 +40,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="alk-Tm-QmE" id="qUy-iQ-dEq"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4G-Iw-tyS">
                                                         <rect key="frame" x="0.0" y="72" width="382" height="48"/>
@@ -128,7 +131,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordField" destination="v4G-Iw-tyS" id="HZB-JR-Dal"/>
+                        <outlet property="passwordField" destination="v4G-Iw-tyS" id="TtZ-4I-2mw"/>
                         <outlet property="signIn" destination="dAm-UW-Dz9" id="kWl-jb-5qm"/>
                         <outlet property="signUp" destination="G50-uW-DtB" id="mHt-xh-tZy"/>
                         <outlet property="usernameField" destination="VaZ-XF-1Xk" id="vJW-fb-mpT"/>
