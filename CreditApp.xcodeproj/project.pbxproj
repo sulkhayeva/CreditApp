@@ -22,6 +22,12 @@
 		7D47AD4F2BD95D6A005F20E2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47AD4D2BD95D6A005F20E2 /* NetworkManager.swift */; };
 		7D47AD502BD95D6A005F20E2 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47AD4E2BD95D6A005F20E2 /* NetworkHelper.swift */; };
 		7D47AD592BD9667B005F20E2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47AD582BD9667B005F20E2 /* RegisterController.swift */; };
+		7D54397B2BF9EE3700DE3C57 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D54397A2BF9EE3700DE3C57 /* Home.storyboard */; };
+		7D54397E2BF9F7B400DE3C57 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54397D2BF9F7B400DE3C57 /* TabbarViewController.swift */; };
+		7D5439802BF9F7C600DE3C57 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54397F2BF9F7C600DE3C57 /* HomeViewController.swift */; };
+		7D5439822BF9F7EA00DE3C57 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439812BF9F7E900DE3C57 /* MoreViewController.swift */; };
+		7D54398B2BF9FD7A00DE3C57 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439892BF9FD7A00DE3C57 /* CardCollectionCell.swift */; };
+		7D54398C2BF9FD7A00DE3C57 /* CardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D54398A2BF9FD7A00DE3C57 /* CardCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		7D47AD4D2BD95D6A005F20E2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7D47AD4E2BD95D6A005F20E2 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		7D47AD582BD9667B005F20E2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		7D54397A2BF9EE3700DE3C57 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		7D54397D2BF9F7B400DE3C57 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		7D54397F2BF9F7C600DE3C57 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7D5439812BF9F7E900DE3C57 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		7D5439892BF9FD7A00DE3C57 /* CardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
+		7D54398A2BF9FD7A00DE3C57 /* CardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 			children = (
 				7D47AD1F2BD952FA005F20E2 /* AppDelegate.swift */,
 				7D47AD212BD952FA005F20E2 /* SceneDelegate.swift */,
+				7D54397C2BF9F70500DE3C57 /* Tabbar */,
 				7D47AD512BD96614005F20E2 /* Auth */,
 				7D47AD332BD95742005F20E2 /* Helpers */,
 				7D47AD282BD952FC005F20E2 /* Assets.xcassets */,
@@ -148,6 +161,35 @@
 			path = RegisterController;
 			sourceTree = "<group>";
 		};
+		7D54397C2BF9F70500DE3C57 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				7D5439832BF9FC2F00DE3C57 /* Cells */,
+				7D54397A2BF9EE3700DE3C57 /* Home.storyboard */,
+				7D54397D2BF9F7B400DE3C57 /* TabbarViewController.swift */,
+				7D54397F2BF9F7C600DE3C57 /* HomeViewController.swift */,
+				7D5439812BF9F7E900DE3C57 /* MoreViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		7D5439832BF9FC2F00DE3C57 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7D5439882BF9FCA800DE3C57 /* CardCollection */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7D5439882BF9FCA800DE3C57 /* CardCollection */ = {
+			isa = PBXGroup;
+			children = (
+				7D5439892BF9FD7A00DE3C57 /* CardCollectionCell.swift */,
+				7D54398A2BF9FD7A00DE3C57 /* CardCollectionCell.xib */,
+			);
+			path = CardCollection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,7 +257,9 @@
 			files = (
 				7D47AD2C2BD952FC005F20E2 /* LaunchScreen.storyboard in Resources */,
 				7D47AD292BD952FC005F20E2 /* Assets.xcassets in Resources */,
+				7D54398C2BF9FD7A00DE3C57 /* CardCollectionCell.xib in Resources */,
 				7D47AD272BD952FA005F20E2 /* Login.storyboard in Resources */,
+				7D54397B2BF9EE3700DE3C57 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,15 +271,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D47AD592BD9667B005F20E2 /* RegisterController.swift in Sources */,
+				7D5439822BF9F7EA00DE3C57 /* MoreViewController.swift in Sources */,
 				7D47AD4C2BD95D53005F20E2 /* UserDefaultsHelper.swift in Sources */,
+				7D54397E2BF9F7B400DE3C57 /* TabbarViewController.swift in Sources */,
 				7D47AD502BD95D6A005F20E2 /* NetworkHelper.swift in Sources */,
 				7D47AD462BD95D1F005F20E2 /* Extensions.swift in Sources */,
 				7D47AD4B2BD95D53005F20E2 /* Layout_Extension.swift in Sources */,
 				7D47AD242BD952FA005F20E2 /* LoginViewController.swift in Sources */,
 				7D47AD4F2BD95D6A005F20E2 /* NetworkManager.swift in Sources */,
+				7D54398B2BF9FD7A00DE3C57 /* CardCollectionCell.swift in Sources */,
 				7D47AD4A2BD95D53005F20E2 /* KeychainHelper.swift in Sources */,
 				7D47AD202BD952FA005F20E2 /* AppDelegate.swift in Sources */,
 				7D47AD222BD952FA005F20E2 /* SceneDelegate.swift in Sources */,
+				7D5439802BF9F7C600DE3C57 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

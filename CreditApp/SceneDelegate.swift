@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let newWindow = UIWindow(windowScene: windowScene)
         
         // Create your new root view controller
-        let vc = UIStoryboard.init(name: "Login", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController ?? LoginViewController()
+        let vc = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabbarViewController") as? TabbarViewController ?? TabbarViewController()
         // Set the new root view controller
         let navigationController = UINavigationController(rootViewController: vc)
         newWindow.rootViewController = navigationController

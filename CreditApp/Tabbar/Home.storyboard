@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--More-->
+        <scene sceneID="8oi-sl-l0U">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tLb-AX-zeP" userLabel="More" customClass="MoreViewController" customModule="CreditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kCK-xh-uJR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WWD-48-eVF"/>
+                        <color key="backgroundColor" name="main_bg_color"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="ellipsis.rectangle" catalog="system" id="onS-pS-cYA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDB-XG-ofA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="701"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="XXG-Ok-NXJ">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MbO-Rn-w6r" userLabel="Home" customClass="HomeViewController" customModule="CreditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JNm-Nt-H6O">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzB-T2-fi2">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="93"/>
+                                <color key="backgroundColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="bF7-n6-ckY"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jKL-8Q-fQ5">
+                                <rect key="frame" x="4" y="97.000000000000028" width="385" height="340.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="RiO-4R-ft2">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MbO-Rn-w6r" id="wDx-O4-BSN"/>
+                                    <outlet property="delegate" destination="MbO-Rn-w6r" id="yap-j0-aVL"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jix-KR-7ac"/>
+                        <color key="backgroundColor" name="main_bg_color"/>
+                        <constraints>
+                            <constraint firstItem="jKL-8Q-fQ5" firstAttribute="leading" secondItem="jix-KR-7ac" secondAttribute="leading" constant="4" id="6h7-d4-wPb"/>
+                            <constraint firstItem="HzB-T2-fi2" firstAttribute="leading" secondItem="jix-KR-7ac" secondAttribute="leading" id="8sP-VP-pZ2"/>
+                            <constraint firstItem="HzB-T2-fi2" firstAttribute="top" secondItem="JNm-Nt-H6O" secondAttribute="top" id="DlH-eg-pO3"/>
+                            <constraint firstItem="jKL-8Q-fQ5" firstAttribute="top" secondItem="HzB-T2-fi2" secondAttribute="bottom" constant="4" id="TkH-NX-tjg"/>
+                            <constraint firstItem="jKL-8Q-fQ5" firstAttribute="height" secondItem="JNm-Nt-H6O" secondAttribute="height" multiplier="0.4" id="cWR-VE-9vy"/>
+                            <constraint firstItem="jix-KR-7ac" firstAttribute="trailing" secondItem="jKL-8Q-fQ5" secondAttribute="trailing" constant="4" id="fNG-wc-69i"/>
+                            <constraint firstItem="jix-KR-7ac" firstAttribute="trailing" secondItem="HzB-T2-fi2" secondAttribute="trailing" id="uTN-H7-hsU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="MMi-zQ-V2r"/>
+                    <connections>
+                        <outlet property="collection" destination="jKL-8Q-fQ5" id="MBu-oo-Jtj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ggc-ob-Hh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1405.3435114503816" y="700.70422535211276"/>
+        </scene>
+        <!--Tabbar View Controller-->
+        <scene sceneID="XTe-Bx-1cX">
+            <objects>
+                <tabBarController storyboardIdentifier="TabbarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FFp-hR-3R0" customClass="TabbarViewController" customModule="CreditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5d4-ao-MEl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MbO-Rn-w6r" kind="relationship" relationship="viewControllers" id="nRK-cD-sWO"/>
+                        <segue destination="tLb-AX-zeP" kind="relationship" relationship="viewControllers" id="Sxp-Lv-9lQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLK-7F-FRo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541" y="-56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ellipsis.rectangle" catalog="system" width="128" height="79"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <namedColor name="main_bg_color">
+            <color red="0.9882352941176471" green="0.97647058823529409" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
