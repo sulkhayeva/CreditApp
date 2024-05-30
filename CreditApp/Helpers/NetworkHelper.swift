@@ -25,7 +25,7 @@ enum ErrorTypes: String, Error {
 class NetworkHelper {
     static let shared = NetworkHelper()
     
-    private let baseURL = "https://api.themoviedb.org/3/"
+    private let baseURL = "http://84.252.81.49:5001/api/"
     let header = [
         "accept": "application/json",
         "Authorization": "Bearer \(String(data: KeychainHelper.retrieveData(forService: "token")!, encoding: .utf8) ?? "")"

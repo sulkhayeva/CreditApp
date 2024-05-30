@@ -60,9 +60,11 @@ class LoginViewController: UIViewController {
         }
     }
     
-    fileprivate func checkUser(username: String, pass: String){
-       
+    fileprivate func checkUser(username: String, pass: String){ //bura elaveler olunacaq
+        
     }
+    
+   
 
     fileprivate func signUpButtonClicked(){
         let vc = UIStoryboard.init(name: "Login", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterController") as? RegisterController ?? RegisterController()

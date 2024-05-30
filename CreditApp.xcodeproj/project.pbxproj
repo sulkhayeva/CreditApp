@@ -28,6 +28,14 @@
 		7D5439822BF9F7EA00DE3C57 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439812BF9F7E900DE3C57 /* MoreViewController.swift */; };
 		7D54398B2BF9FD7A00DE3C57 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439892BF9FD7A00DE3C57 /* CardCollectionCell.swift */; };
 		7D54398C2BF9FD7A00DE3C57 /* CardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D54398A2BF9FD7A00DE3C57 /* CardCollectionCell.xib */; };
+		7D54398E2C060C1100DE3C57 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54398D2C060C1100DE3C57 /* User.swift */; };
+		7D5439912C061B2700DE3C57 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54398F2C061B2700DE3C57 /* CardCell.swift */; };
+		7D5439922C061B2700DE3C57 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5439902C061B2700DE3C57 /* CardCell.xib */; };
+		7D5439B12C090ACD00DE3C57 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439B02C090ACD00DE3C57 /* HomeViewModel.swift */; };
+		7D5439B32C090C6500DE3C57 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439B22C090C6500DE3C57 /* AuthManager.swift */; };
+		7D5439B52C090C7C00DE3C57 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439B42C090C7C00DE3C57 /* AuthHelper.swift */; };
+		7D5439BB2C090DE900DE3C57 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439BA2C090DE900DE3C57 /* LoginRequestModel.swift */; };
+		7D5439BF2C09100C00DE3C57 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +60,14 @@
 		7D5439812BF9F7E900DE3C57 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		7D5439892BF9FD7A00DE3C57 /* CardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
 		7D54398A2BF9FD7A00DE3C57 /* CardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionCell.xib; sourceTree = "<group>"; };
+		7D54398D2C060C1100DE3C57 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7D54398F2C061B2700DE3C57 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		7D5439902C061B2700DE3C57 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		7D5439B02C090ACD00DE3C57 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7D5439B22C090C6500DE3C57 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		7D5439B42C090C7C00DE3C57 /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
+		7D5439BA2C090DE900DE3C57 /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
+		7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +104,12 @@
 			children = (
 				7D47AD1F2BD952FA005F20E2 /* AppDelegate.swift */,
 				7D47AD212BD952FA005F20E2 /* SceneDelegate.swift */,
-				7D54397C2BF9F70500DE3C57 /* Tabbar */,
-				7D47AD512BD96614005F20E2 /* Auth */,
+				7D5439832BF9FC2F00DE3C57 /* Cells */,
+				7D5439AE2C090A1B00DE3C57 /* NetworkLayer */,
+				7D5439AF2C090A4200DE3C57 /* Models */,
+				7D47AD552BD96636005F20E2 /* Controller */,
+				7D47AD542BD96631005F20E2 /* ViewModel */,
+				7D47AD512BD96614005F20E2 /* Storyboard */,
 				7D47AD332BD95742005F20E2 /* Helpers */,
 				7D47AD282BD952FC005F20E2 /* Assets.xcassets */,
 				7D47AD2A2BD952FC005F20E2 /* LaunchScreen.storyboard */,
@@ -111,28 +131,19 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		7D47AD512BD96614005F20E2 /* Auth */ = {
+		7D47AD512BD96614005F20E2 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				7D54397A2BF9EE3700DE3C57 /* Home.storyboard */,
 				7D47AD252BD952FA005F20E2 /* Login.storyboard */,
-				7D47AD562BD9663E005F20E2 /* View */,
-				7D47AD552BD96636005F20E2 /* Controller */,
-				7D47AD542BD96631005F20E2 /* ViewModel */,
-				7D47AD532BD96625005F20E2 /* Model */,
 			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		7D47AD532BD96625005F20E2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		7D47AD542BD96631005F20E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7D5439B02C090ACD00DE3C57 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -140,42 +151,19 @@
 		7D47AD552BD96636005F20E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7D47AD572BD96659005F20E2 /* RegisterController */,
 				7D47AD232BD952FA005F20E2 /* LoginViewController.swift */,
+				7D47AD582BD9667B005F20E2 /* RegisterController.swift */,
+				7D5439812BF9F7E900DE3C57 /* MoreViewController.swift */,
+				7D54397F2BF9F7C600DE3C57 /* HomeViewController.swift */,
+				7D54397D2BF9F7B400DE3C57 /* TabbarViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		7D47AD562BD9663E005F20E2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7D47AD572BD96659005F20E2 /* RegisterController */ = {
-			isa = PBXGroup;
-			children = (
-				7D47AD582BD9667B005F20E2 /* RegisterController.swift */,
-			);
-			path = RegisterController;
-			sourceTree = "<group>";
-		};
-		7D54397C2BF9F70500DE3C57 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				7D5439832BF9FC2F00DE3C57 /* Cells */,
-				7D54397A2BF9EE3700DE3C57 /* Home.storyboard */,
-				7D54397D2BF9F7B400DE3C57 /* TabbarViewController.swift */,
-				7D54397F2BF9F7C600DE3C57 /* HomeViewController.swift */,
-				7D5439812BF9F7E900DE3C57 /* MoreViewController.swift */,
-			);
-			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		7D5439832BF9FC2F00DE3C57 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7D5439932C061C3100DE3C57 /* CardCell */,
 				7D5439882BF9FCA800DE3C57 /* CardCollection */,
 			);
 			path = Cells;
@@ -188,6 +176,42 @@
 				7D54398A2BF9FD7A00DE3C57 /* CardCollectionCell.xib */,
 			);
 			path = CardCollection;
+			sourceTree = "<group>";
+		};
+		7D5439932C061C3100DE3C57 /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				7D54398F2C061B2700DE3C57 /* CardCell.swift */,
+				7D5439902C061B2700DE3C57 /* CardCell.xib */,
+			);
+			path = CardCell;
+			sourceTree = "<group>";
+		};
+		7D5439AE2C090A1B00DE3C57 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7D5439B62C090C8200DE3C57 /* Auth */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		7D5439AF2C090A4200DE3C57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D54398D2C060C1100DE3C57 /* User.swift */,
+				7D5439BA2C090DE900DE3C57 /* LoginRequestModel.swift */,
+				7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D5439B62C090C8200DE3C57 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7D5439B22C090C6500DE3C57 /* AuthManager.swift */,
+				7D5439B42C090C7C00DE3C57 /* AuthHelper.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D47AD2C2BD952FC005F20E2 /* LaunchScreen.storyboard in Resources */,
+				7D5439922C061B2700DE3C57 /* CardCell.xib in Resources */,
 				7D47AD292BD952FC005F20E2 /* Assets.xcassets in Resources */,
 				7D54398C2BF9FD7A00DE3C57 /* CardCollectionCell.xib in Resources */,
 				7D47AD272BD952FA005F20E2 /* Login.storyboard in Resources */,
@@ -270,14 +295,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5439B12C090ACD00DE3C57 /* HomeViewModel.swift in Sources */,
+				7D5439BB2C090DE900DE3C57 /* LoginRequestModel.swift in Sources */,
+				7D5439B32C090C6500DE3C57 /* AuthManager.swift in Sources */,
 				7D47AD592BD9667B005F20E2 /* RegisterController.swift in Sources */,
 				7D5439822BF9F7EA00DE3C57 /* MoreViewController.swift in Sources */,
 				7D47AD4C2BD95D53005F20E2 /* UserDefaultsHelper.swift in Sources */,
+				7D5439912C061B2700DE3C57 /* CardCell.swift in Sources */,
 				7D54397E2BF9F7B400DE3C57 /* TabbarViewController.swift in Sources */,
 				7D47AD502BD95D6A005F20E2 /* NetworkHelper.swift in Sources */,
 				7D47AD462BD95D1F005F20E2 /* Extensions.swift in Sources */,
+				7D5439BF2C09100C00DE3C57 /* LoginResponseModel.swift in Sources */,
+				7D5439B52C090C7C00DE3C57 /* AuthHelper.swift in Sources */,
 				7D47AD4B2BD95D53005F20E2 /* Layout_Extension.swift in Sources */,
 				7D47AD242BD952FA005F20E2 /* LoginViewController.swift in Sources */,
+				7D54398E2C060C1100DE3C57 /* User.swift in Sources */,
 				7D47AD4F2BD95D6A005F20E2 /* NetworkManager.swift in Sources */,
 				7D54398B2BF9FD7A00DE3C57 /* CardCollectionCell.swift in Sources */,
 				7D47AD4A2BD95D53005F20E2 /* KeychainHelper.swift in Sources */,

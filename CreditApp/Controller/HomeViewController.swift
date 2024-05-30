@@ -10,12 +10,17 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var payButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func payButton(_ sender: Any){
+        
     }
     
     fileprivate func setupView() {
