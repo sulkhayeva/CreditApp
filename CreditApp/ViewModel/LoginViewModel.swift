@@ -13,8 +13,8 @@ class LoginViewModel{
     
     func sendLoginRequest(userName: String, password: String) {
         let body: [String: Any] = [
-            "username": "sulkhayev",
-            "password": "sulkhayev12",
+            "username": userName,
+            "password": password,
             "hostname": "iOS_app"
         ]
         AuthManager.shared.sendLoginRequest(body: body) { [weak self] response, error in
