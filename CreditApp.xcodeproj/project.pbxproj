@@ -36,6 +36,8 @@
 		7D5439B52C090C7C00DE3C57 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439B42C090C7C00DE3C57 /* AuthHelper.swift */; };
 		7D5439BB2C090DE900DE3C57 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439BA2C090DE900DE3C57 /* LoginRequestModel.swift */; };
 		7D5439BF2C09100C00DE3C57 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */; };
+		7D5439C12C0A571F00DE3C57 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C02C0A571F00DE3C57 /* RegisterResponseModel.swift */; };
+		7D5439C32C15CC1200DE3C57 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C22C15CC1200DE3C57 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		7D5439B42C090C7C00DE3C57 /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
 		7D5439BA2C090DE900DE3C57 /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
 		7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		7D5439C02C0A571F00DE3C57 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
+		7D5439C22C15CC1200DE3C57 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +125,6 @@
 		7D47AD332BD95742005F20E2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7D47AD4E2BD95D6A005F20E2 /* NetworkHelper.swift */,
-				7D47AD4D2BD95D6A005F20E2 /* NetworkManager.swift */,
 				7D47AD452BD95D1F005F20E2 /* Extensions.swift */,
 				7D47AD472BD95D52005F20E2 /* KeychainHelper.swift */,
 				7D47AD482BD95D52005F20E2 /* Layout_Extension.swift */,
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5439B02C090ACD00DE3C57 /* HomeViewModel.swift */,
+				7D5439C22C15CC1200DE3C57 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,6 +193,8 @@
 		7D5439AE2C090A1B00DE3C57 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				7D47AD4D2BD95D6A005F20E2 /* NetworkManager.swift */,
+				7D47AD4E2BD95D6A005F20E2 /* NetworkHelper.swift */,
 				7D5439B62C090C8200DE3C57 /* Auth */,
 			);
 			path = NetworkLayer;
@@ -201,6 +206,7 @@
 				7D54398D2C060C1100DE3C57 /* User.swift */,
 				7D5439BA2C090DE900DE3C57 /* LoginRequestModel.swift */,
 				7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */,
+				7D5439C02C0A571F00DE3C57 /* RegisterResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5439C32C15CC1200DE3C57 /* LoginViewModel.swift in Sources */,
 				7D5439B12C090ACD00DE3C57 /* HomeViewModel.swift in Sources */,
 				7D5439BB2C090DE900DE3C57 /* LoginRequestModel.swift in Sources */,
 				7D5439B32C090C6500DE3C57 /* AuthManager.swift in Sources */,
@@ -302,6 +309,7 @@
 				7D5439822BF9F7EA00DE3C57 /* MoreViewController.swift in Sources */,
 				7D47AD4C2BD95D53005F20E2 /* UserDefaultsHelper.swift in Sources */,
 				7D5439912C061B2700DE3C57 /* CardCell.swift in Sources */,
+				7D5439C12C0A571F00DE3C57 /* RegisterResponseModel.swift in Sources */,
 				7D54397E2BF9F7B400DE3C57 /* TabbarViewController.swift in Sources */,
 				7D47AD502BD95D6A005F20E2 /* NetworkHelper.swift in Sources */,
 				7D47AD462BD95D1F005F20E2 /* Extensions.swift in Sources */,

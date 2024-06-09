@@ -8,12 +8,12 @@
 import Foundation
 
 struct LoginResponseModel: Codable {
-    let data: [Datum]?
+    let data: [LoginResponseM]?
     let text, status: String?
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct LoginResponseM: Codable {
     let id, username: String?
     let password: String?
     let roleName, branchName, companyName, registrationDate: String?

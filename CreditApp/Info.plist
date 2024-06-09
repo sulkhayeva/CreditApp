@@ -19,5 +19,22 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSExceptionDomains</key>
+            <dict>
+                <key>84.252.81.49</key>
+                <dict>
+                    <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                    <true/>
+                    <key>NSIncludesSubdomains</key>
+                    <true/>
+                    <key>NSExceptionRequiresForwardSecrecy</key>
+                    <false/>
+                    <key>NSExceptionMinimumTLSVersion</key>
+                    <string>TLSv1.0</string>
+                </dict>
+            </dict>
+        </dict>
 </dict>
 </plist>

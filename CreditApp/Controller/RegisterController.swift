@@ -27,14 +27,14 @@ class RegisterController: UIViewController {
     @IBAction func backAction(_ sender: UIButton){
         navigationController?.popViewController(animated: true)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDesign()
         registerDelegate()
         navigationController?
             .setNavigationBarHidden(true, animated: true) //default backi gorunmez edir
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -95,45 +95,45 @@ class RegisterController: UIViewController {
         else{
             print(name,surname,fathersName,idenfi,email,username,pass)
         }
-              
+        
     }
-
+    
 }
 
 extension RegisterController: UITextFieldDelegate{
-        
-        func textFieldDidChangeSelection(_ textField: UITextField) {
-            guard let text = textField.text else {return}
-            switch textField {
-            case nameField:
-                nameField.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-                nameField.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
-                break
-            case surnameField:
-                surnameField.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-                surnameField.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
-                break
-            case fathersName:
-                fathersName.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-                fathersName.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
-                break
-            case identification:
-                identification.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-                identification.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
-                break
-            case emailTextfield:
-                emailTextfield.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-                emailTextfield.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
-                break
-            case usernameTextfield:
-                usernameTextfield.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-                usernameTextfield.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
-                break
-            case passwordTextfield:
-                passwordTextfield.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-                passwordTextfield.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
-                break
-            default: break
-            }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let text = textField.text else {return}
+        switch textField {
+        case nameField:
+            nameField.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            nameField.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
+            break
+        case surnameField:
+            surnameField.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            surnameField.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
+            break
+        case fathersName:
+            fathersName.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            fathersName.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
+            break
+        case identification:
+            identification.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            identification.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
+            break
+        case emailTextfield:
+            emailTextfield.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            emailTextfield.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
+            break
+        case usernameTextfield:
+            usernameTextfield.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            usernameTextfield.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
+            break
+        case passwordTextfield:
+            passwordTextfield.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            passwordTextfield.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
+            break
+        default: break
         }
+    }
 }
