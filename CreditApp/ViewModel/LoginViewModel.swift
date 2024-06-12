@@ -13,9 +13,6 @@ class LoginViewModel {
     var successCalback: (()->Void)?
     var errorCallback: ((String)->Void)?
     
-//    func openHome(){
-//        let homeVC = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController ?? HomeViewController()
-//    }
     
     func sendLoginRequest(userName: String, password: String) {
         let body: [String: Any] = [

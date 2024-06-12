@@ -71,4 +71,15 @@ extension UIViewController {
         alertController.view.tintColor = UIColor.systemIndigo
         present(alertController, animated: true, completion: nil)
     }
+    
+    //isteye bagli "completion" blogu qebul edir
+    func showMessage(_ message: String, completion: (() -> Void)?) {
+            let alertController = UIAlertController(title: message, message: "", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                completion?()
+            }
+            alertController.addAction(okAction)
+            alertController.view.tintColor = UIColor.systemIndigo
+            present(alertController, animated: true, completion: nil)
+        }
 }

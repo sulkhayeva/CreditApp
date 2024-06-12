@@ -32,10 +32,20 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func openHome(){
+        let homeVC = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController ?? HomeViewController()
+        navigationController?.pushViewController(homeVC, animated: true)
+    }
+    
     fileprivate func configureViewModel() {
         viewModel.successCalback = {[weak self] in
             guard let self else { return}
             //            self.showLoading = false
+            
+            //DispatchQueue - UI guncellemelerini ve userle etkilesimli islemler ana threadda edilir
+            DispatchQueue.main.async{
+                self.openHome()
+            }
         }
         
         viewModel.errorCallback = {[weak self] errorString in

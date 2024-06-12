@@ -41,10 +41,20 @@ class RegisterController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func openLogin(){
+        let LoginVC = UIStoryboard(name: "Login", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController ?? LoginViewController()
+        navigationController?.pushViewController(LoginVC, animated: true)
+    }
+    
     fileprivate func configureViewModel(){
         viewModel.successCalback = {[weak self] in
             guard let self else {return}
             //            self.showLoading = false
+            DispatchQueue.main.async(){
+                self.showMessage("Ugurlu qeydiyyat!", completion: {
+                    self.openLogin()
+                })
+            }
         }
         
         viewModel.errorCallback = {[weak self] errorString in
