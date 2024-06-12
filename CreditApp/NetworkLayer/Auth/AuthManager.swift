@@ -33,14 +33,14 @@ class AuthManager{
     func sendRegisterRequest (
         body: [String: Any],
         complete: @escaping((RegisterResponseModel?, String?) -> Void)) {
-        let url = NetworkHelper.shared.requestURL(url: "v2/user/register")
+        //let url = NetworkHelper.shared.requestURL(url: "user/register")
         
-        NetworkManager.shared.request(
-            type: RegisterResponseModel.self,
-            url: url,
-//            header: NetworkHelper.shared.header,
-            body: body,
-            method: .post) { response in
+            NetworkManager.shared.request(
+                type: RegisterResponseModel.self,
+                url: AuthHelper.registr.path,
+                header: NetworkHelper.shared.getHeader(),
+                body: body,
+                method: .post) { response in
                 switch response {
                 case .success(let data):
                     complete(data, nil)

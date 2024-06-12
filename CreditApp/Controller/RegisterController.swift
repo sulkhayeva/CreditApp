@@ -20,6 +20,8 @@ class RegisterController: UIViewController {
     @IBOutlet private weak var backButton: UIButton!
     @IBOutlet private weak var registerLabel: UILabel!
     
+    private var viewModel = RegisterViewModel()
+    
     @IBAction func signUpActionRegister(_ sender: UIButton){
         signUpClicked()
     }
@@ -30,12 +32,28 @@ class RegisterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViewModel()
         configureDesign()
         registerDelegate()
         navigationController?
             .setNavigationBarHidden(true, animated: true) //default backi gorunmez edir
         
         // Do any additional setup after loading the view.
+    }
+    
+    fileprivate func configureViewModel(){
+        viewModel.successCalback = {[weak self] in
+            guard let self else {return}
+            //            self.showLoading = false
+        }
+        
+        viewModel.errorCallback = {[weak self] errorString in
+            guard let self else {return}
+            //self.showLoading = false
+            DispatchQueue.main.async {
+                self.showMessage(errorString)
+            }
+        }
     }
     
     fileprivate func registerDelegate(){
@@ -88,12 +106,12 @@ class RegisterController: UIViewController {
               let email = emailTextfield.text,
               let username = usernameTextfield.text,
               let pass = passwordTextfield.text else {return}
-        if name.count < 3 || surname.count < 4 || fathersName.count < 3 || idenfi.count < 7 || email.count < 7 || username.count < 7 || pass.count < 7{
+        if name.count < 3 || surname.count < 4 || fathersName.count < 3 || idenfi.count < 6 || email.count < 7 || username.count < 7 || pass.count < 7{
             showMessage("Məlumatları tam doldurun!")
         }
         
         else{
-            print(name,surname,fathersName,idenfi,email,username,pass)
+            viewModel.sendRegisterRequest(userName: username, password: pass, email: email, name: name, surname: surname, fatherName: fathersName, identityPin: idenfi)
         }
         
     }
@@ -106,20 +124,20 @@ extension RegisterController: UITextFieldDelegate{
         guard let text = textField.text else {return}
         switch textField {
         case nameField:
-            nameField.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-            nameField.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
+            nameField.layer.borderColor = text.count > 2 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            nameField.layer.borderWidth = text.count > 2 ? 1.0 : 2.0
             break
         case surnameField:
             surnameField.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
             surnameField.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
             break
         case fathersName:
-            fathersName.layer.borderColor = text.count > 3 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-            fathersName.layer.borderWidth = text.count > 3 ? 1.0 : 2.0
+            fathersName.layer.borderColor = text.count > 2 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            fathersName.layer.borderWidth = text.count > 2 ? 1.0 : 2.0
             break
         case identification:
-            identification.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
-            identification.layer.borderWidth = text.count > 7 ? 1.0 : 2.0
+            identification.layer.borderColor = text.count > 6 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor
+            identification.layer.borderWidth = text.count > 6 ? 1.0 : 2.0
             break
         case emailTextfield:
             emailTextfield.layer.borderColor = text.count > 7 ? UIColor(named: "usernameBorder")?.cgColor : UIColor.red.cgColor

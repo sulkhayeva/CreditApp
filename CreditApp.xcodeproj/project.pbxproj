@@ -38,6 +38,8 @@
 		7D5439BF2C09100C00DE3C57 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */; };
 		7D5439C12C0A571F00DE3C57 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C02C0A571F00DE3C57 /* RegisterResponseModel.swift */; };
 		7D5439C32C15CC1200DE3C57 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C22C15CC1200DE3C57 /* LoginViewModel.swift */; };
+		7D5439C52C17120600DE3C57 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C42C17120600DE3C57 /* RegisterViewModel.swift */; };
+		7D5439C72C17122600DE3C57 /* RegisterRequistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C62C17122600DE3C57 /* RegisterRequistModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		7D5439C02C0A571F00DE3C57 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
 		7D5439C22C15CC1200DE3C57 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7D5439C42C17120600DE3C57 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		7D5439C62C17122600DE3C57 /* RegisterRequistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequistModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			children = (
 				7D5439B02C090ACD00DE3C57 /* HomeViewModel.swift */,
 				7D5439C22C15CC1200DE3C57 /* LoginViewModel.swift */,
+				7D5439C42C17120600DE3C57 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				7D54398D2C060C1100DE3C57 /* User.swift */,
 				7D5439BA2C090DE900DE3C57 /* LoginRequestModel.swift */,
 				7D5439BE2C09100C00DE3C57 /* LoginResponseModel.swift */,
+				7D5439C62C17122600DE3C57 /* RegisterRequistModel.swift */,
 				7D5439C02C0A571F00DE3C57 /* RegisterResponseModel.swift */,
 			);
 			path = Models;
@@ -320,8 +326,10 @@
 				7D54398E2C060C1100DE3C57 /* User.swift in Sources */,
 				7D47AD4F2BD95D6A005F20E2 /* NetworkManager.swift in Sources */,
 				7D54398B2BF9FD7A00DE3C57 /* CardCollectionCell.swift in Sources */,
+				7D5439C52C17120600DE3C57 /* RegisterViewModel.swift in Sources */,
 				7D47AD4A2BD95D53005F20E2 /* KeychainHelper.swift in Sources */,
 				7D47AD202BD952FA005F20E2 /* AppDelegate.swift in Sources */,
+				7D5439C72C17122600DE3C57 /* RegisterRequistModel.swift in Sources */,
 				7D47AD222BD952FA005F20E2 /* SceneDelegate.swift in Sources */,
 				7D5439802BF9F7C600DE3C57 /* HomeViewController.swift in Sources */,
 			);

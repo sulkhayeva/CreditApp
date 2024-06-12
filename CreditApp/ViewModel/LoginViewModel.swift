@@ -6,10 +6,16 @@
 //
 
 import Foundation
-class LoginViewModel{
+import UIKit
+
+class LoginViewModel {
     private (set) var userModel: LoginResponseM?
     var successCalback: (()->Void)?
     var errorCallback: ((String)->Void)?
+    
+//    func openHome(){
+//        let homeVC = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController ?? HomeViewController()
+//    }
     
     func sendLoginRequest(userName: String, password: String) {
         let body: [String: Any] = [
@@ -23,13 +29,14 @@ class LoginViewModel{
                 self.errorCallback?(errorString)
             }
             else if let data = response?.data {
-                userModel = data.first
+                userModel = data.first //APIda array oldugu ucun first yaziriq
                 let successSave = KeychainManager.shared.save(key: "TOKEN", value: userModel?.token ?? "")
                 print("Save successful: \(successSave)")
                 self.successCalback?()
+                
             }
             else {
-                self.errorCallback?(response?.text ?? "")
+                self.errorCallback?(response?.text ?? "") //ne xeta,ne de veri yoxdursa(200 qaytarir yoxsa)
             }
         }
     }
