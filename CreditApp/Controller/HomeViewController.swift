@@ -10,17 +10,26 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
-    @IBOutlet weak var payButton: UIButton!
+    @IBOutlet weak var payCreditButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         
+        
+        payCreditButton.layer.cornerRadius = 6
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func payButton(_ sender: Any){
+        payButtonClicked()
+    }
+    
+    func payButtonClicked(){
+        let vc = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "PayCreditViewController") as? PayCreditViewController ?? PayCreditViewController()
         
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     fileprivate func setupView() {

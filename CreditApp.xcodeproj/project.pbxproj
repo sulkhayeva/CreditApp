@@ -40,6 +40,7 @@
 		7D5439C32C15CC1200DE3C57 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C22C15CC1200DE3C57 /* LoginViewModel.swift */; };
 		7D5439C52C17120600DE3C57 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C42C17120600DE3C57 /* RegisterViewModel.swift */; };
 		7D5439C72C17122600DE3C57 /* RegisterRequistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C62C17122600DE3C57 /* RegisterRequistModel.swift */; };
+		7D5439C92C19DC5B00DE3C57 /* PayCreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5439C82C19DC5B00DE3C57 /* PayCreditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		7D5439C22C15CC1200DE3C57 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7D5439C42C17120600DE3C57 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		7D5439C62C17122600DE3C57 /* RegisterRequistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequistModel.swift; sourceTree = "<group>"; };
+		7D5439C82C19DC5B00DE3C57 /* PayCreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCreditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				7D5439812BF9F7E900DE3C57 /* MoreViewController.swift */,
 				7D54397F2BF9F7C600DE3C57 /* HomeViewController.swift */,
 				7D54397D2BF9F7B400DE3C57 /* TabbarViewController.swift */,
+				7D5439C82C19DC5B00DE3C57 /* PayCreditViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				7D47AD4F2BD95D6A005F20E2 /* NetworkManager.swift in Sources */,
 				7D54398B2BF9FD7A00DE3C57 /* CardCollectionCell.swift in Sources */,
 				7D5439C52C17120600DE3C57 /* RegisterViewModel.swift in Sources */,
+				7D5439C92C19DC5B00DE3C57 /* PayCreditViewController.swift in Sources */,
 				7D47AD4A2BD95D53005F20E2 /* KeychainHelper.swift in Sources */,
 				7D47AD202BD952FA005F20E2 /* AppDelegate.swift in Sources */,
 				7D5439C72C17122600DE3C57 /* RegisterRequistModel.swift in Sources */,
